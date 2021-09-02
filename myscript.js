@@ -2,7 +2,8 @@
 function computerPlay() {
     const roll = ["Rock", "Paper", "Scissors"];
     const random = Math.floor(Math.random() * roll.length);
-    return roll[random];
+    computerSelection = roll[random];
+    return computerSelection.toUpperCase;
 }
 
 function userPlay() {
@@ -10,9 +11,7 @@ function userPlay() {
     return answer.toUpperCase();
 }
 
-const answer = "ROCK"
-
-function confirmAnswer(answer) {
+function confirmUserAnswer(answer) {
     switch (answer) {
         case "ROCK":
             playerSelection = answer;
@@ -26,15 +25,24 @@ function confirmAnswer(answer) {
         default:
             alert("Invalid Input, Try again.")
     }
-    console.log(playerSelection)
 }
 
+function determineIfPlayerWon(playerSelection, computerSelection) {
+    if (playerSelection === "ROCK" && computerSelection === "SCISSORS"){
+        return true
+    }
+    else if (playerSelection == "SCISSORS" && computerSelection == "PAPER") {
+        return true
+    }
+}
 
-const computerSelection = computerPlay()
+function playeriWinPrint() {
+    alert("You won!!")
+}
 
 function playRound(playerSelection, computerSelection) {
     
-    }
+}
 
 /*
 create a list: Rock, Paper, Scissors.
