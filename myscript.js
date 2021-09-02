@@ -84,11 +84,9 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-
 function game() {
     let score = 0
     for (let i = 0; i < 5; i++) {
-        
         let playerSelection = userPlay()
         let computerSelection = computerPlay()
         let result = playRound(playerSelection, computerSelection)
@@ -100,9 +98,8 @@ function game() {
             score = score - 1
         }
         console.log("Player score: " + score) 
-    }
-   
-
+    }  
+    
     if (score > 0) {
     console.log("Player Wins")
     }
@@ -112,14 +109,3 @@ function game() {
     else
     console.log("Player Loses")
 }
-
-/*
-create a list: Rock, Paper, Scissors.
-OR
-create a varialbe Rock.
-create a varialbe Paper.
-create a varialbe Scissors.
-create a function that will randomize the 3 variables.
-
-create a prompt for the user to input text.
-*/
